@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="HomeWorkToDo" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="hP6-BS-2JX" id="wNG-TN-H1a"/>
+                <outlet property="fabButton" destination="XlS-xj-Lfy" id="1nk-Ig-Hdk"/>
+                <outlet property="tableView" destination="Qg1-W3-Otp" id="rML-fU-URd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Qg1-W3-Otp">
+                    <rect key="frame" x="0.0" y="122" width="414" height="740"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hP6-BS-2JX">
+                    <rect key="frame" x="0.0" y="122" width="414" height="740"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mcK-4A-CMe">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-JV-zjr">
+                    <rect key="frame" x="16" y="60" width="382" height="46"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aa" translatesAutoresizingMaskIntoConstraints="NO" id="0ez-vX-5si" customClass="CircleImageView" customModule="HomeWorkToDo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="0ez-vX-5si" secondAttribute="height" multiplier="1:1" id="DP8-AF-yh9"/>
+                                <constraint firstAttribute="height" constant="46" id="zTh-nG-x0o"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="TodoList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZy-Nz-MF8">
+                            <rect key="frame" x="139.5" y="0.0" width="103" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-Uq-gTy">
+                            <rect key="frame" x="336" y="0.0" width="46" height="46"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="plus" catalog="system"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="Oee-aL-ehw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="k9C-Uq-gTy" firstAttribute="width" secondItem="0ez-vX-5si" secondAttribute="width" id="yxv-8o-nVX"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlS-xj-Lfy" userLabel="fabButton" customClass="CircleButton" customModule="HomeWorkToDo" customModuleProvider="target">
+                    <rect key="frame" x="324" y="772" width="74" height="74"/>
+                    <color key="backgroundColor" name="daily_color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XlS-xj-Lfy" secondAttribute="height" multiplier="1:1" id="YBD-Sx-D8F"/>
+                        <constraint firstAttribute="width" constant="74" id="eat-TW-rtZ"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="plus" catalog="system">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                    </state>
+                    <connections>
+                        <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="pId-oW-KKO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vWI-JV-zjr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="1gN-lJ-eYi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XlS-xj-Lfy" secondAttribute="bottom" constant="16" id="3dV-3o-EN3"/>
+                <constraint firstItem="hP6-BS-2JX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="45d-7w-kLC"/>
+                <constraint firstItem="Qg1-W3-Otp" firstAttribute="top" secondItem="vWI-JV-zjr" secondAttribute="bottom" constant="16" id="Eck-FD-aJW"/>
+                <constraint firstItem="vWI-JV-zjr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="L4h-cx-lXG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vWI-JV-zjr" secondAttribute="trailing" constant="16" id="LQf-1b-CAC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hP6-BS-2JX" secondAttribute="trailing" id="Tkx-R5-NRh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hP6-BS-2JX" secondAttribute="bottom" id="VXD-V1-ScB"/>
+                <constraint firstItem="hP6-BS-2JX" firstAttribute="top" secondItem="vWI-JV-zjr" secondAttribute="bottom" constant="16" id="Vae-xW-Di7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qg1-W3-Otp" secondAttribute="trailing" id="fSw-7w-UWg"/>
+                <constraint firstAttribute="bottom" secondItem="Qg1-W3-Otp" secondAttribute="bottom" constant="34" id="jzM-8y-7QK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XlS-xj-Lfy" secondAttribute="trailing" constant="16" id="nVV-bs-lTS"/>
+                <constraint firstItem="Qg1-W3-Otp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oFC-UX-LFf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="107.8125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="aa" width="1000" height="1080"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <namedColor name="daily_color">
+            <color red="0.28235294117647058" green="0.52156862745098043" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
